@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">SHOP<span>.</span></a>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Mahsulot qidirish..."
+        >
+        <span>⌕</span>
+      </div>
+
+      <button class="cart-button" id="cartButton">
+        🛒 Savatcha
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div>
+        <p class="hero-label">ONLINE SHOPPING</p>
+        <h1>O'zingizga kerakli<br>mahsulotlarni toping.</h1>
+        <p>Eng yaxshi mahsulotlar bir joyda!</p>
+        <a href="#products" class="hero-link">Xarid qilish →</a>
+      </div>
+      <div class="hero-icon">🛍️</div>
+    </section>
+
+    <section class="products-section" id="products">
+
+      <div class="section-heading">
+        <div>
+          <p class="subtitle">BIZNING MAHSULOTLAR</p>
+          <h2>Barcha mahsulotlar</h2>
+        </div>
+
+        <p id="productCount">0 ta mahsulot</p>
+      </div>
+
+      <div class="filters">
+
+        <select id="categoryFilter">
+          <option value="all">Barcha kategoriyalar</option>
+        </select>
+
+        <select id="sortFilter">
+          <option value="default">Saralash</option>
+          <option value="low">Arzonidan qimmatiga</option>
+          <option value="high">Qimmatidan arzoniga</option>
+          <option value="name">Nom bo'yicha</option>
+        </select>
+
+        <label class="stock-filter">
+          <input type="checkbox" id="stockFilter">
+          Faqat mavjudlari
+        </label>
+
+      </div>
+
+      <div class="products-grid" id="productsList">
+        <!-- Mahsulotlar JavaScript orqali chiqadi -->
+      </div>
+
+      <div class="empty-message" id="emptyMessage">
+        Mahsulot topilmadi!
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Savatcha oynasi -->
+  <div class="modal" id="cartModal">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2>Savatcham 🛒</h2>
+        <button id="closeCart" class="close-button">✕</button>
+      </div>
+
+      <div id="cartItems" class="cart-items">
+        <!-- Savatcha mahsulotlari -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="total">
+          <span>Jami:</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+
+        <button class="checkout-button" id="checkoutButton">
+          Buyurtma berish
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
